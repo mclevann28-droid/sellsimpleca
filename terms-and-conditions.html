@@ -9,357 +9,358 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --cream: #FAFAF7;
-    --white: #FFFFFF;
-    --charcoal: #1F1F1F;
-    --dark-green: #3D5A3D;
-    --border: #E8E8E4;
-    --text-muted: #5C5C5C;
-    --text-light: #8A8A8A;
-  }
+ :root {
+  --cream: #FAFAF7;
+  --white: #FFFFFF;
+  --charcoal: #1F1F1F;
+  --dark-green: #3D5A3D;
+  --border: #E8E8E4;
+  --text-muted: #5C5C5C;
+  --text-light: #8A8A8A;
+ }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: var(--charcoal);
-    background: var(--cream);
-    line-height: 1.6;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-  }
+ body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--charcoal);
+  background: var(--cream);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+ }
 
-  .navbar {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    background: rgba(250, 250, 247, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 1000;
-    border-bottom: 1px solid var(--border);
-  }
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(250, 250, 247, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+ }
 
-  .nav-inner {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-    padding: 0 24px;
-  }
+.nav-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 24px;
+ }
 
-  .logo {
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    color: var(--charcoal);
-    text-decoration: none;
-  }
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--charcoal);
+  text-decoration: none;
+ }
 
-  .logo span { color: var(--dark-green); }
+.logo span { color: var(--dark-green); }
 
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    list-style: none;
-  }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+ }
 
-  .nav-links a {
-    text-decoration: none;
-    color: var(--charcoal);
-    font-size: 13px;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
+.nav-links a {
+  text-decoration: none;
+  color: var(--charcoal);
+  font-size: 13px;
+  font-weight: 500;
+  transition: color 0.2s;
+ }
 
-  .nav-links a:hover { color: var(--dark-green); }
+.nav-links a:hover { color: var(--dark-green); }
 
-  .btn-green {
-    background: var(--dark-green);
-    color: white !important;
-    padding: 9px 18px;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 12px;
-    letter-spacing: 0.3px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.15s;
-    text-decoration: none;
-    display: inline-block;
-  }
+.btn-green {
+  background: var(--dark-green);
+  color: white !important;
+  padding: 9px 18px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+  display: inline-block;
+ }
 
-  .btn-green:hover { background: #2F4A2F; transform: translateY(-1px); }
-  .btn-green:active { transform: translateY(0); }
+.btn-green:hover { background: #2F4A2F; transform: translateY(-1px); }
+.btn-green:active { transform: translateY(0); }
 
-  .mobile-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--charcoal); }
+.mobile-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--charcoal); }
 
-  .content-wrap {
-    padding: 100px 24px 60px;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.content-wrap {
+  padding: 100px 24px 60px;
+  max-width: 800px;
+  margin: 0 auto;
+ }
 
-  .content-wrap h1 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--charcoal);
-  }
+.content-wrap h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--charcoal);
+ }
 
-  .last-updated {
-    font-size: 14px;
-    color: var(--text-light);
-    margin-bottom: 40px;
-  }
+.last-updated {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 40px;
+ }
 
-  .content-wrap h2 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 32px;
-    margin-bottom: 12px;
-    color: var(--dark-green);
-  }
+.content-wrap h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  color: var(--dark-green);
+ }
 
-  .content-wrap p {
-    font-size: 15px;
-    color: var(--text-muted);
-    margin-bottom: 14px;
-    line-height: 1.7;
-  }
+.content-wrap p {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  line-height: 1.7;
+ }
 
-  .content-wrap ul {
-    margin-left: 24px;
-    margin-bottom: 16px;
-  }
+.content-wrap ul {
+  margin-left: 24px;
+  margin-bottom: 16px;
+ }
 
-  .content-wrap ul li {
-    font-size: 15px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    line-height: 1.6;
-  }
+.content-wrap ul li {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  line-height: 1.6;
+ }
 
-  .content-wrap strong {
-    color: var(--charcoal);
-    font-weight: 600;
-  }
+.content-wrap strong {
+  color: var(--charcoal);
+  font-weight: 600;
+ }
 
-  .footer {
-    background: var(--dark-green);
-    color: white;
-    padding: 18px 24px;
-    margin-top: 40px;
-  }
+.footer {
+  background: var(--dark-green);
+  color: white;
+  padding: 18px 24px;
+  margin-top: 40px;
+ }
 
-  .footer-inner {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+.footer-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+ }
 
-  .footer-logo {
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 2px;
-  }
+.footer-logo {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+ }
 
-  .footer-contact {
-    display: flex;
-    gap: 24px;
-    font-size: 12px;
-  }
+.footer-contact {
+  display: flex;
+  gap: 24px;
+  font-size: 12px;
+ }
 
-  .footer-contact a {
-    color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    transition: color 0.2s;
-  }
+.footer-contact a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s;
+ }
 
-  .footer-contact a:hover { color: white; }
+.footer-contact a:hover { color: white; }
 
-  .footer-links {
-    display: flex;
-    gap: 16px;
-    font-size: 12px;
-  }
+.footer-links {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+ }
 
-  .footer-links a {
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
+.footer-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+ }
 
-  .footer-links a:hover { color: white; }
+.footer-links a:hover { color: white; }
 
-  .footer-copy {
-    font-size: 11px;
-    color: rgba(255,255,255,0.55);
-    text-align: right;
-    line-height: 1.4;
-  }
+.footer-copy {
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  text-align: right;
+  line-height: 1.4;
+ }
 
-  .footer-legal {
-    background: var(--dark-green);
-    padding: 0 24px 18px;
-  }
+.footer-legal {
+  background: var(--dark-green);
+  padding: 0 24px 18px;
+ }
 
-  .footer-legal-inner {
-    max-width: 1140px;
-    margin: 0 auto;
-    font-size: 10px;
-    color: rgba(255,255,255,0.45);
-    line-height: 1.5;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 12px;
-  }
+.footer-legal-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  font-size: 10px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.5;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 12px;
+ }
 
-  .mobile-nav {
-    display: none;
-    position: fixed;
-    top: 60px;
-    left: 0; right: 0;
-    background: var(--cream);
-    border-bottom: 1px solid var(--border);
-    padding: 12px 24px;
-    z-index: 999;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  }
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0; right: 0;
+  background: var(--cream);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+ }
 
-  .mobile-nav.show { display: block; }
-  .mobile-nav a {
-    display: block;
-    padding: 10px 0;
-    color: var(--charcoal);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    border-bottom: 1px solid var(--border);
-  }
-  .mobile-nav a:last-child { border-bottom: none; margin-top: 6px; }
+.mobile-nav.show { display: block; }
+.mobile-nav a {
+  display: block;
+  padding: 10px 0;
+  color: var(--charcoal);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--border);
+ }
+.mobile-nav a:last-child { border-bottom: none; margin-top: 6px; }
 
-  @media (max-width: 900px) {
-    .nav-links { display: none; }
-    .mobile-toggle { display: block; }
-    .content-wrap { padding: 80px 20px 40px; }
-    .content-wrap h1 { font-size: 26px; }
-    .footer-inner { flex-direction: column; text-align: center; }
-    .footer-contact { flex-direction: column; gap: 6px; }
-    .footer-links { justify-content: center; }
-    .footer-copy { text-align: center; }
-  }
+ @media (max-width: 900px) {
+ .nav-links { display: none; }
+ .mobile-toggle { display: block; }
+ .content-wrap { padding: 80px 20px 40px; }
+ .content-wrap h1 { font-size: 26px; }
+ .footer-inner { flex-direction: column; text-align: center; }
+ .footer-contact { flex-direction: column; gap: 6px; }
+ .footer-links { justify-content: center; }
+ .footer-copy { text-align: center; }
+ }
 </style>
 <base target="_blank">
 </head>
 <body>
 
 <nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="logo">SELL <span>SIMPLE</span></a>
-    <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="/terms-and-conditions.html" class="btn-green">Terms & Conditions</a></li>
-    </ul>
-    <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Toggle menu">&#9776;</button>
-  </div>
+ <div class="nav-inner">
+  <a href="/" class="logo">SELL <span>SIMPLE</span></a>
+  <ul class="nav-links">
+   <li><a href="/">Home</a></li>
+   <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+   <li><a href="/terms-and-conditions.html" class="btn-green">Terms & Conditions</a></li>
+  </ul>
+  <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Toggle menu">&#9776;</button>
+ </div>
 </nav>
 
 <div class="mobile-nav" id="mobileNav">
-  <a href="/" onclick="toggleMobile()">Home</a>
-  <a href="/privacy-policy.html" onclick="toggleMobile()">Privacy Policy</a>
-  <a href="/terms-and-conditions.html" class="btn-green" onclick="toggleMobile()">Terms & Conditions</a>
+ <a href="/" onclick="toggleMobile()">Home</a>
+ <a href="/privacy-policy.html" onclick="toggleMobile()">Privacy Policy</a>
+ <a href="/terms-and-conditions.html" class="btn-green" onclick="toggleMobile()">Terms & Conditions</a>
 </div>
 
 <div class="content-wrap">
-  <h1>Terms & Conditions</h1>
-  <p class="last-updated">Last Updated: August 26, 2026</p>
+ <h1>Terms & Conditions</h1>
+ <p class="last-updated">Last Updated: August 26, 2026</p>
 
-  <p>By accessing or using the Sell Simple CA website, you agree to these Terms & Conditions. If you do not agree with these terms, please do not use the website.</p>
+ <p>By accessing or using the Sell Simple CA website, you agree to these Terms & Conditions. If you do not agree with these terms, please do not use the website.</p>
 
-  <h2>Our Services</h2>
-  <p>Sell Simple CA provides information and services related to real estate and potential property acquisitions. Submitting information through our website does not create a contractual obligation for Sell Simple CA to purchase a property or for a property owner to sell a property.</p>
-  <p>Any potential transaction is subject to further evaluation, agreement between the parties, and applicable documentation.</p>
+ <h2>Our Services</h2>
+ <p>Sell Simple CA provides information and services related to real estate and potential property acquisitions. Submitting information through our website does not create a contractual obligation for Sell Simple CA to purchase a property or for a property owner to sell a property.</p>
+ <p>Any potential transaction is subject to further evaluation, agreement between the parties, and applicable documentation.</p>
 
-  <h2>Information You Provide</h2>
-  <p>You agree that information submitted through our website is accurate to the best of your knowledge and that you have the authority to provide information regarding the property or inquiry.</p>
+ <h2>Information You Provide</h2>
+ <p>You agree that information submitted through our website is accurate to the best of your knowledge and that you have the authority to provide information regarding the property or inquiry.</p>
 
-  <h2>Communications Consent</h2>
-  <p>When you voluntarily provide your contact information and consent to communications, you authorize Sell Simple CA to contact you regarding your inquiry or our services by phone, email, or text message.</p>
-  <p>Consent to receive marketing communications is not a condition of purchasing or selling property or obtaining our services.</p>
-  <p>Message frequency may vary. Message and data rates may apply.</p>
-  <p>You may opt out of SMS communications at any time by replying <strong>STOP</strong>. For assistance, reply <strong>HELP</strong> or contact us through our website.</p>
+ <h2>Communications Consent</h2>
+ <p>When you voluntarily provide your contact information and consent to communications, you authorize Sell Simple CA to contact you regarding your inquiry or our services by phone, email, or text message.</p>
+ <p>Consent to receive marketing communications is not a condition of purchasing or selling property or obtaining our services.</p>
+ <p>Message frequency may vary.</p>
+ <p>You may opt out of SMS communications at any time by replying <strong>STOP</strong>. For assistance, reply <strong>HELP</strong> or contact us through our website.</p>
 
-  <h2>No Guarantee of Offer or Transaction</h2>
-  <p>Information presented on this website does not constitute a guaranteed offer to purchase real estate. Property offers, when applicable, may depend on property condition, location, market conditions, title information, and other relevant factors.</p>
+ <h2>No Guarantee of Offer or Transaction</h2>
+ <p>Information presented on this website does not constitute a guaranteed offer to purchase real estate. Property offers, when applicable, may depend on property condition, location, market conditions, title information, and other relevant factors.</p>
 
-  <h2>Website Use</h2>
-  <p>You agree not to misuse this website, interfere with its operation, attempt unauthorized access, or use the website for unlawful purposes.</p>
+ <h2>Website Use</h2>
+ <p>You agree not to misuse this website, interfere with its operation, attempt unauthorized access, or use the website for unlawful purposes.</p>
 
-  <h2>Third-Party Services</h2>
-  <p>Our website may use third-party services for website hosting, forms, communications, analytics, or other business functions. Those services may be governed by their own terms and privacy policies.</p>
+ <h2>Third-Party Services</h2>
+ <p>Our website may use third-party services for website hosting, forms, communications, analytics, or other business functions. Those services may be governed by their own terms and privacy policies.</p>
 
-  <h2>Disclaimer</h2>
-  <p>Website information is provided for general informational purposes. Sell Simple CA makes reasonable efforts to maintain accurate information but does not guarantee that all website content will always be complete, current, or error-free.</p>
+ <h2>Disclaimer</h2>
+ <p>Website information is provided for general informational purposes. Sell Simple CA makes reasonable efforts to maintain accurate information but does not guarantee that all website content will always be complete, current, or error-free.</p>
 
-  <h2>Limitation of Liability</h2>
-  <p>To the extent permitted by applicable law, Sell Simple CA will not be liable for indirect, incidental, or consequential damages arising from your use of this website.</p>
+ <h2>Limitation of Liability</h2>
+ <p>To the extent permitted by applicable law, Sell Simple CA will not be liable for indirect, incidental, or consequential damages arising from your use of this website.</p>
 
-  <h2>Changes to These Terms</h2>
-  <p>We may update these Terms & Conditions periodically. Updated terms will be posted on this page with a revised effective date.</p>
+ <h2>Changes to These Terms</h2>
+ <p>We may update these Terms & Conditions periodically. Updated terms will be posted on this page with a revised effective date.</p>
 
-  <h2>Contact Us</h2>
-  <p>If you have questions regarding these Terms & Conditions, please contact Sell Simple CA through the contact information provided on our website.</p>
+ <h2>Contact Us</h2>
+ <p>If you have questions regarding these Terms & Conditions, please contact Sell Simple CA through the contact information provided on our website.</p>
 </div>
 
 <footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-logo">SELL SIMPLE</div>
-    <div class="footer-contact">
-      <a href="tel:9167137718">&#128222; (916) 713-7718</a>
-      <a href="mailto:SellSimpleCA@gmail.com">&#9993; sellsimpleca@gmail.com</a>
-      <a href="https://sellsimpleca.com" target="_blank" rel="noopener">&#127760; sellsimpleca.com</a>
-    </div>
-    <div class="footer-copy">&copy; 2026 Sell Simple.<br>All Rights Reserved.</div>
+ <div class="footer-inner">
+  <div class="footer-logo">SELL SIMPLE</div>
+  <div class="footer-contact">
+   <a href="tel:9167137718">&#128222; (916) 713-7718</a>
+   <a href="mailto:SellSimpleCA@gmail.com">&#9993; sellsimpleca@gmail.com</a>
+   <a href="https://sellsimpleca.com" target="_blank" rel="noopener">&#127760; sellsimpleca.com</a>
   </div>
+  <div class="footer-copy">&copy; 2026 Sell Simple.<br>All Rights Reserved.</div>
+ </div>
 </footer>
 <div class="footer-legal">
-  <div class="footer-legal-inner">
-    <div class="footer-links">
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms-and-conditions.html">Terms & Conditions</a>
-    </div>
-    <p style="margin-top: 8px;">Sell Simple is a fictitious business name of Veritas Capital LLC. Sell Simple is a real estate buyer. A member of Sell Simple is a licensed California real estate salesperson. Sell Simple and its members are acting solely as principals when purchasing properties and are not acting as the seller's real estate agent or representative. Sell Simple does not provide legal, tax, or financial advice. Property owners are encouraged to consider all available selling options and seek independent professional advice when appropriate.</p>
+ <div class="footer-legal-inner">
+  <div class="footer-links">
+   <a href="privacy-policy.html">Privacy Policy</a>
+   <a href="terms-and-conditions.html">Terms & Conditions</a>
+   <a href="consent.html">Communications Consent</a>
   </div>
+  <p style="margin-top: 8px;">Sell Simple is a fictitious business name of Veritas Capital LLC. Sell Simple is a real estate buyer. A member of Sell Simple is a licensed California real estate salesperson. Sell Simple and its members are acting solely as principals when purchasing properties and are not acting as the seller's real estate agent or representative. Sell Simple does not provide legal, tax, or financial advice. Property owners are encouraged to consider all available selling options and seek independent professional advice when appropriate.</p>
+ </div>
 </div>
 
 <script>
-  function toggleMobile() {
-    document.getElementById('mobileNav').classList.toggle('show');
+ function toggleMobile() {
+  document.getElementById('mobileNav').classList.toggle('show');
+ }
+
+ window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) document.getElementById('mobileNav').classList.remove('show');
+ });
+
+ document.addEventListener('click', (e) => {
+  const nav = document.getElementById('mobileNav');
+  const toggle = document.querySelector('.mobile-toggle');
+  if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+   nav.classList.remove('show');
   }
-
-  window.addEventListener('resize', () => {
-    if (window.innerWidth > 900) document.getElementById('mobileNav').classList.remove('show');
-  });
-
-  document.addEventListener('click', (e) => {
-    const nav = document.getElementById('mobileNav');
-    const toggle = document.querySelector('.mobile-toggle');
-    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-      nav.classList.remove('show');
-    }
-  });
+ });
 </script>
 
 </body>
