@@ -32,7 +32,6 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* ===== NAVIGATION ===== */
   .navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -100,7 +99,6 @@
 
   .mobile-toggle { display: none; background: none; border: none; font-size: 22px; cursor: pointer; color: var(--charcoal); }
 
-  /* ===== HERO ===== */
   .hero {
     padding-top: 60px;
     position: relative;
@@ -175,7 +173,6 @@
     color: var(--text-light);
   }
 
-  /* ===== SECTIONS COMMON ===== */
   .section {
     padding: 60px 24px;
     max-width: 1140px;
@@ -190,7 +187,6 @@
     color: var(--charcoal);
   }
 
-  /* ===== HOW IT WORKS ===== */
   .hiw {
     background: var(--white);
     border-top: 1px solid var(--border);
@@ -265,7 +261,6 @@
     line-height: 1.6;
   }
 
-  /* ===== WHY SELL SIMPLE ===== */
   .why-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -313,7 +308,6 @@
     line-height: 1.5;
   }
 
-  /* ===== ABOUT ===== */
   .about-wrap {
     background: linear-gradient(to right, #F8F7F4, var(--cream));
     padding: 52px 24px;
@@ -387,7 +381,6 @@
     line-height: 1.5;
   }
 
-  /* ===== FORM ===== */
   .form-wrap {
     background: var(--white);
     padding: 52px 24px;
@@ -491,7 +484,6 @@
     flex-shrink: 0;
   }
 
-  /* ===== FAQ ===== */
   .faq-wrap {
     background: var(--cream);
     padding: 52px 24px;
@@ -572,7 +564,6 @@
     line-height: 1.65;
   }
 
-  /* ===== AREAS ===== */
   .areas-wrap {
     background: linear-gradient(135deg, #F5F4F0 0%, var(--cream) 100%);
     overflow: hidden;
@@ -633,7 +624,6 @@
     display: block;
   }
 
-  /* ===== FOOTER ===== */
   .footer {
     background: var(--dark-green);
     color: white;
@@ -673,6 +663,20 @@
 
   .footer-contact a:hover { color: white; }
 
+  .footer-links {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: white; }
+
   .footer-copy {
     font-size: 11px;
     color: rgba(255,255,255,0.55);
@@ -695,7 +699,6 @@
     padding-top: 12px;
   }
 
-  /* ===== MOBILE ===== */
   .mobile-nav {
     display: none;
     position: fixed;
@@ -742,7 +745,6 @@
     opacity: 1;
   }
 
-  /* ===== RESPONSIVE ===== */
   @media (max-width: 900px) {
     .nav-links { display: none; }
     .mobile-toggle { display: block; }
@@ -779,6 +781,7 @@
 
     .footer-inner { flex-direction: column; text-align: center; }
     .footer-contact { flex-direction: column; gap: 6px; }
+    .footer-links { justify-content: center; }
     .footer-copy { text-align: center; }
   }
 
@@ -793,10 +796,9 @@
 </head>
 <body>
 
-<!-- NAVIGATION -->
 <nav class="navbar" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="#" class="logo">SELL <span>SIMPLE</span></a>
+    <a href="/" class="logo">SELL <span>SIMPLE</span></a>
     <ul class="nav-links">
       <li><a href="#how">How It Works</a></li>
       <li><a href="#why">Why Sell Simple</a></li>
@@ -816,7 +818,6 @@
   <a href="#form" class="btn-green" onclick="toggleMobile()">GET MY CASH OFFER</a>
 </div>
 
-<!-- HERO -->
 <section class="hero" id="hero">
   <div class="hero-bg">
     <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&h=800&fit=crop&q=80" alt="Beautiful residential home exterior" loading="eager">
@@ -832,7 +833,6 @@
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
 <section class="section hiw" id="how">
   <h2 class="section-head">How It Works</h2>
   <div class="hiw-grid">
@@ -863,7 +863,6 @@
   </div>
 </section>
 
-<!-- WHY SELL SIMPLE -->
 <section class="section" id="why">
   <h2 class="section-head">Why Sell Simple</h2>
   <div class="why-grid">
@@ -905,7 +904,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="about-wrap" id="about">
   <div class="about-inner">
     <div class="about-text">
@@ -923,7 +921,6 @@
   </div>
 </section>
 
-<!-- FORM -->
 <section class="form-wrap" id="form">
   <div class="form-inner">
     <h2>Get Your No-Obligation Cash Offer</h2>
@@ -947,7 +944,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="faq-wrap" id="faq">
   <div class="faq-inner">
     <h2 class="section-head">Frequently Asked Questions</h2>
@@ -976,7 +972,6 @@
   </div>
 </section>
 
-<!-- AREAS -->
 <section class="areas-wrap" id="areas">
   <div class="areas-inner">
     <div class="areas-text">
@@ -993,7 +988,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-logo">SELL SIMPLE</div>
@@ -1007,7 +1001,11 @@
 </footer>
 <div class="footer-legal">
   <div class="footer-legal-inner">
-    Sell Simple is a fictitious business name of Veritas Capital LLC. Sell Simple is a real estate buyer. A member of Sell Simple is a licensed California real estate salesperson. Sell Simple and its members are acting solely as principals when purchasing properties and are not acting as the seller's real estate agent or representative. Sell Simple does not provide legal, tax, or financial advice. Property owners are encouraged to consider all available selling options and seek independent professional advice when appropriate.
+    <div class="footer-links">
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-and-conditions.html">Terms & Conditions</a>
+    </div>
+    <p style="margin-top: 8px;">Sell Simple is a fictitious business name of Veritas Capital LLC. Sell Simple is a real estate buyer. A member of Sell Simple is a licensed California real estate salesperson. Sell Simple and its members are acting solely as principals when purchasing properties and are not acting as the seller's real estate agent or representative. Sell Simple does not provide legal, tax, or financial advice. Property owners are encouraged to consider all available selling options and seek independent professional advice when appropriate.</p>
   </div>
 </div>
 
@@ -1025,31 +1023,50 @@
     if (!wasOpen) item.classList.add('open');
   }
 
-  function handleSubmit(e) {
+  document.getElementById('leadForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    const data = Object.fromEntries(formData.entries());
-    console.log('Form submitted:', data);
+    const form = e.target;
+    const data = new FormData(form);
 
-    const t = document.getElementById('toast');
-    t.classList.add('show');
-    e.target.reset();
-    setTimeout(() => t.classList.remove('show'), 3000);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    // TODO: Replace with your actual form endpoint (Formspree, Netlify Forms, etc.)
-    // Example with Formspree:
-    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(data)
-    // });
-  }
+      if (response.ok) {
+        const t = document.getElementById('toast');
+        t.textContent = 'Form submitted! We'll contact you shortly.';
+        t.classList.add('show');
+        form.reset();
+        setTimeout(() => t.classList.remove('show'), 4000);
+      } else {
+        const t = document.getElementById('toast');
+        t.textContent = 'Something went wrong. Please try again.';
+        t.style.background = '#8B0000';
+        t.classList.add('show');
+        setTimeout(() => {
+          t.classList.remove('show');
+          t.style.background = '';
+        }, 4000);
+      }
+    } catch (error) {
+      const t = document.getElementById('toast');
+      t.textContent = 'Something went wrong. Please try again.';
+      t.style.background = '#8B0000';
+      t.classList.add('show');
+      setTimeout(() => {
+        t.classList.remove('show');
+        t.style.background = '';
+      }, 4000);
+    }
+  });
 
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) document.getElementById('mobileNav').classList.remove('show');
   });
 
-  // Close mobile menu when clicking outside
   document.addEventListener('click', (e) => {
     const nav = document.getElementById('mobileNav');
     const toggle = document.querySelector('.mobile-toggle');
