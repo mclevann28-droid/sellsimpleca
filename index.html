@@ -79,6 +79,14 @@
 
   .nav-links a:hover { color: var(--dark-green); }
 
+  .nav-phone {
+    color: var(--dark-green) !important;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+  }
+  .nav-phone:hover { color: #2F4A2F !important; }
+
   .btn-green {
     background: var(--dark-green);
     color: white !important;
@@ -775,6 +783,69 @@
     opacity: 1;
   }
 
+
+  .transformations-wrap {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 52px 24px;
+  }
+
+  .transformations-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .transformations-sub {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 32px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .transformations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .transformations-item {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--white);
+    position: relative;
+  }
+
+  .transformations-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+
+  .transformations-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--dark-green);
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .transformations-grid { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 900px) {
     .nav-links { display: none; }
     .mobile-toggle { display: block; }
@@ -823,6 +894,7 @@
   }
 </style>
 <base target="_blank">
+<base target="_blank">
 </head>
 <body>
 
@@ -834,6 +906,7 @@
       <li><a href="#why">Why Sell Simple</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="tel:9167137718" class="nav-phone">Call or Text (916) 713-7718</a></li>
       <li><a href="#form" class="btn-green">GET MY CASH OFFER</a></li>
     </ul>
     <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Toggle menu">&#9776;</button>
@@ -845,12 +918,13 @@
   <a href="#why" onclick="toggleMobile()">Why Sell Simple</a>
   <a href="#about" onclick="toggleMobile()">About Us</a>
   <a href="#faq" onclick="toggleMobile()">FAQ</a>
+  <a href="tel:9167137718" onclick="toggleMobile()">Call or Text (916) 713-7718</a>
   <a href="#form" class="btn-green" onclick="toggleMobile()">GET MY CASH OFFER</a>
 </div>
 
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&h=800&fit=crop&q=80" alt="Beautiful residential home exterior" loading="eager">
+    <img src="images/hero-family.png" alt="Family holding a SOLD sign" loading="eager">
   </div>
   <div class="hero-fade"></div>
   <div class="hero-inner">
@@ -951,6 +1025,23 @@
   </div>
 </section>
 
+<section class="transformations-wrap" id="transformations">
+  <div class="transformations-inner">
+    <h2 class="section-head">Real Properties. Real Transformations.</h2>
+    <p class="transformations-sub">We purchase properties in their current condition—no repairs, cleaning or renovations required. These are actual properties our team improved after purchasing them.</p>
+    <div class="transformations-grid">
+      <div class="transformations-item">
+        <img src="images/before-after-exterior.jpg" alt="Before and after exterior property renovation" loading="lazy">
+        <span class="transformations-label">Exterior</span>
+      </div>
+      <div class="transformations-item">
+        <img src="images/before-after-kitchen.jpg" alt="Before and after kitchen renovation" loading="lazy">
+        <span class="transformations-label">Kitchen</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="form-wrap" id="form">
   <div class="form-inner">
     <h2>Get Your No-Obligation Cash Offer</h2>
@@ -1029,7 +1120,7 @@
     <div class="footer-logo">SELL SIMPLE</div>
     <div class="footer-contact">
       <a href="tel:9167137718">&#128222; (916) 713-7718</a>
-      <a href="mailto:SellSimpleCA@gmail.com">&#9993; sellsimpleca@gmail.com</a>
+      <a href="mailto:offers@sellsimpleca.com">&#9993; sellsimpleca@gmail.com</a>
       <a href="https://sellsimpleca.com" target="_blank" rel="noopener">&#127760; sellsimpleca.com</a>
     </div>
     <div class="footer-copy">&copy; 2026 Sell Simple.<br>All Rights Reserved.</div>
@@ -1040,6 +1131,7 @@
     <div class="footer-links">
       <a href="privacy-policy.html">Privacy Policy</a>
       <a href="terms-and-conditions.html">Terms & Conditions</a>
+      <a href="consent.html">Communications Consent</a>
     </div>
     <p style="margin-top: 8px;">Sell Simple is a fictitious business name of Veritas Capital LLC. Sell Simple is a real estate buyer. A member of Sell Simple is a licensed California real estate salesperson. Sell Simple and its members are acting solely as principals when purchasing properties and are not acting as the seller's real estate agent or representative. Sell Simple does not provide legal, tax, or financial advice. Property owners are encouraged to consider all available selling options and seek independent professional advice when appropriate.</p>
   </div>
