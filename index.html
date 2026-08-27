@@ -1178,26 +1178,52 @@
   <div class="faq-inner">
     <h2 class="section-head">Frequently Asked Questions</h2>
     <div class="faq-grid">
+
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">Do I need to make any repairs?</button>
-        <div class="faq-a"><p>No. We purchase properties in their current condition. There's no need to remodel, paint, replace flooring, landscape, or make other repairs before selling to us.</p></div>
+        <button type="button" class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Do I need to make repairs?
+        </button>
+        <div class="faq-a">
+          <p>No. We purchase properties in their current condition. There's no need to remodel, paint, replace flooring, landscape, or make other repairs before selling to us.</p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">How quickly can you close?</button>
-        <div class="faq-a"><p>Timing depends on the property and title conditions. Because we're purchasing with cash, we can often close much faster than a traditionally financed buyer. We can also accommodate sellers who need additional time.</p></div>
+        <button type="button" class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Are there commissions?
+        </button>
+        <div class="faq-a">
+          <p>We don't charge you a real estate commission when we're purchasing your property directly.</p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">Do I have to move out before closing?</button>
-        <div class="faq-a"><p>No, you don't have to move out before closing. We can work with your timeline and coordinate a move-out date that works for you.</p></div>
+        <button type="button" class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          How quickly can you close?
+        </button>
+        <div class="faq-a">
+          <p>Timing depends on the property and title conditions. Because we're purchasing with cash, we can often close much faster than a traditionally financed buyer. We can also accommodate sellers who need additional time.</p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">Are there any fees or commissions?</button>
-        <div class="faq-a"><p>We don't charge you a real estate commission when we're purchasing your property directly. There are no hidden fees.</p></div>
+        <button type="button" class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Do you buy properties that need a lot of work?
+        </button>
+        <div class="faq-a">
+          <p>Yes. We consider properties in almost any condition, including properties needing significant repairs or renovation.</p>
+        </div>
       </div>
+
       <div class="faq-item">
-        <button type="button" class="faq-q" onclick="toggleFaq(this)">Do you buy houses in poor condition?</button>
-        <div class="faq-a"><p>Yes. We consider properties in almost any condition, including properties needing significant repairs or updates.</p></div>
+        <button type="button" class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
+          Is there any obligation to accept the offer?
+        </button>
+        <div class="faq-a">
+          <p>No. Receiving an offer from Sell Simple does not obligate you to sell.</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -1251,10 +1277,19 @@
     const faqItem = button.closest('.faq-item');
     if (!faqItem) return;
 
+    const willOpen = !faqItem.classList.contains('open');
+
     document.querySelectorAll('.faq-item').forEach(function(item) {
-      if (item !== faqItem) {
-        item.classList.remove('open');
-      }
+      item.classList.remove('open');
+      const itemButton = item.querySelector('.faq-q');
+      if (itemButton) itemButton.setAttribute('aria-expanded', 'false');
+    });
+
+    if (willOpen) {
+      faqItem.classList.add('open');
+      button.setAttribute('aria-expanded', 'true');
+    }
+  }
     });
 
     faqItem.classList.toggle('open');
