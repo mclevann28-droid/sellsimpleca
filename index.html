@@ -891,11 +891,11 @@
     background: var(--white);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
-    padding: 52px 24px;
+    padding: 64px 24px;
   }
 
   .transformations-inner {
-    max-width: 1000px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 
@@ -912,8 +912,9 @@
 
   .transformations-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
   }
 
   .transformations-item {
@@ -926,27 +927,29 @@
 
   .transformations-item img {
     width: 100%;
-    height: auto;
+    height: 420px;
     display: block;
-    object-fit: cover;
+    object-fit: contain;
+    background: var(--cream);
   }
 
   .transformations-label {
     position: absolute;
-    bottom: 12px;
-    left: 12px;
+    bottom: 14px;
+    left: 14px;
     background: var(--dark-green);
     color: white;
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 4px;
+    padding: 7px 14px;
+    border-radius: 5px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
   }
 
   @media (max-width: 900px) {
     .transformations-grid { grid-template-columns: 1fr; }
+    .transformations-item img { height: auto; }
   }
 
   @media (max-width: 900px) {
