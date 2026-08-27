@@ -127,7 +127,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 30% center;
+    object-position: 45% center;
     display: block;
   }
 
@@ -317,8 +317,22 @@
   }
 
   .about-wrap {
-    background: linear-gradient(to right, #F8F7F4, var(--cream));
+    background: url("about-bg.gif") center center / cover no-repeat;
     padding: 52px 24px;
+    position: relative;
+  }
+
+  .about-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(31, 31, 31, 0.72);
+    z-index: 0;
+  }
+
+  .about-inner {
+    position: relative;
+    z-index: 1;
   }
 
   .about-inner {
@@ -334,29 +348,31 @@
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 12px;
-    color: var(--dark-green);
+    color: #fff;
   }
 
   .about-text p {
     font-size: 14px;
-    color: var(--text-muted);
+    color: rgba(255,255,255,0.85);
     line-height: 1.7;
     margin-bottom: 10px;
   }
 
   .about-text .goal {
     font-weight: 600;
-    color: var(--charcoal);
+    color: #fff;
     margin-top: 14px;
     font-size: 14px;
   }
 
   .about-card {
-    background: var(--white);
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(255,255,255,0.3);
     border-radius: 8px;
     padding: 32px 24px;
     text-align: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
 
   .about-card .ac-icon {
@@ -851,7 +867,7 @@
     .mobile-toggle { display: block; }
 
     .hero { min-height: auto; }
-    .hero-bg img { object-position: 65% center; }
+    .hero-bg img { object-position: 55% center; }
     .hero-inner {
       text-align: center;
       padding: 50px 24px 60px;
@@ -925,7 +941,7 @@
 
 <section class="hero" id="hero">
   <div class="hero-bg">
-    <img src="hero-family.png" alt="Family holding a SOLD sign" loading="eager">
+    <img src="hero-family2.png" alt="Family holding a SOLD sign" loading="eager">
   </div>
   <div class="hero-fade"></div>
   <div class="hero-inner">
